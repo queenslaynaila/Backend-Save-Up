@@ -18,7 +18,7 @@ router.get('/:id', (req, res) => {
 });
 
 // Update a saving by ID
-router.put('/:id', (req, res) => {
+router.patch('/:id', (req, res) => {
     savingsController.updateSaving(req, res);
 });
 
