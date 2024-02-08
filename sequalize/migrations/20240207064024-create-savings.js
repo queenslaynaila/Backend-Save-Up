@@ -23,25 +23,26 @@ module.exports = {
       },
       contributedAmount: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull:true, ///allow null when initial post is sent
         defaultValue: 0
       },
       priority: {
         type: Sequelize.STRING
       },
-      startDate: {
-        type: Sequelize.DATE
+      status: {
+        type: Sequelize.STRING,
+        allowNull:true,
+        defaultValue: 'In Progress' 
       },
       targetDate: {
-        type: Sequelize.DATE
+        type: DataTypes.DATEONLY,
+      },
+      startDate: {
+        type: DataTypes.DATEONLY,
       },
       endDate: {
-        type: Sequelize.DATE
+        type: DataTypes.DATEONLY,
       },
-      excludeWeekends: {
-        type: Sequelize.STRING,
-        defaultValue: 'N/A'
-      },  
       userId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
@@ -53,11 +54,11 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       }
     });
   },
