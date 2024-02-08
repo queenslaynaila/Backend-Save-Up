@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     userId:DataTypes.INTEGER,
     amount: DataTypes.DECIMAL,
     category: DataTypes.STRING,
-    date: DataTypes.DATE
+    date: DataTypes.DATEONLY
     
   }, {
     sequelize,
