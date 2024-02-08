@@ -35,14 +35,14 @@ module.exports = {
         defaultValue: 'In Progress' 
       },
       targetDate: {
-        type: DataTypes.DATEONLY,
+        type: Sequelize.DATEONLY,
       },
       startDate: {
-        type: DataTypes.DATEONLY,
+        type:Sequelize.DATEONLY,
       },
       endDate: {
         allowNull:true , 
-        type: DataTypes.DATEONLY,
+        type: Sequelize.DATEONLY,
       },
       userId: {
         type: Sequelize.INTEGER,
