@@ -64,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     endDate: {
+      allowNull:true , 
       type: DataTypes.DATEONLY,
       get() {
         const targetDate = this.getDataValue('targetDate');

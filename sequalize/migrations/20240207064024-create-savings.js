@@ -41,6 +41,7 @@ module.exports = {
         type: DataTypes.DATEONLY,
       },
       endDate: {
+        allowNull:true , 
         type: DataTypes.DATEONLY,
       },
       userId: {
