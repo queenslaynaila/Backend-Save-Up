@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.DECIMAL
       },
       date: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       savingId: {
         type: Sequelize.INTEGER,
@@ -26,11 +26,11 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       }
     });
   },

@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   },
     savingId:DataTypes.INTEGER,
     amount: DataTypes.DECIMAL,
-    date: DataTypes.DATE
+    date: DataTypes.DATEONLY
   }, {
     sequelize,
     modelName: 'Contribution',
