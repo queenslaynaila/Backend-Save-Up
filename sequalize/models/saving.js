@@ -50,26 +50,17 @@ module.exports = (sequelize, DataTypes) => {
     },
     targetDate: {
       type: DataTypes.DATEONLY,
-      get() {
-        const targetDate = this.getDataValue('targetDate');
-        return targetDate ? targetDate.toLocaleDateString('en-GB') : null; //dd/mm/yyyy
-      }
+      
     },
     startDate: {
       allowNull:true , //allow null when initial post request is sent
       type: DataTypes.DATEONLY,
-      get() {
-        const targetDate = this.getDataValue('targetDate');
-        return targetDate ? targetDate.toLocaleDateString('en-GB') : null;
-      }
+     
     },
     endDate: {
       allowNull:true , 
       type: DataTypes.DATEONLY,
-      get() {
-        const targetDate = this.getDataValue('targetDate');
-        return targetDate ? targetDate.toLocaleDateString('en-GB') : null;
-      }
+     
     }
   }, {
     sequelize,
