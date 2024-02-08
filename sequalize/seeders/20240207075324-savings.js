@@ -7,12 +7,9 @@ module.exports = {
       targetAmount: 85000,
       contributedAmount: 0,
       priority:'Low',
-      startDate: new Date(),
-      targetDate: new Date(),
       userId:1,
-      endDate: new Date(),
-      excludeWeekends: 'N/A ',
-      createdAt: new Date(),
+      targetDate:new Date(2023,4,22),
+        createdAt: new Date(),
       updatedAt: new Date()
     }], {});
   },
