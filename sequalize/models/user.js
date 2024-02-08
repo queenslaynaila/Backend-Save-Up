@@ -21,9 +21,35 @@ const {Model} = require('sequelize');
           primaryKey: true,
           autoIncrement: true
        },
-        email: DataTypes.STRING,
-        username: DataTypes.STRING,
-        password: DataTypes.STRING
+        email: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          unique: {
+            msg: 'Email already exists.'
+          },
+          validate:{
+            isEmail: true,       
+          }
+        },
+        username: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          unique: {
+            msg: 'Username already exists.'
+          },
+        },
+        password: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          validate: {
+            isValidPassword(value) {
+              const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+              if (!passwordRegex.test(value)) {
+                throw new Error('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one symbol');
+              }
+            }
+          }
+        }
     }, {
       sequelize,
       modelName: 'User',
