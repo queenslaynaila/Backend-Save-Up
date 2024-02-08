@@ -15,8 +15,8 @@ router.get('/:id', (req, res) => {
     usersController.getUserById(req, res);
 });
 
-router.put('/:id', (req, res) => {
-    usesrController.updateUser(req, res);
+router.patch('/:id', (req, res) => {
+    usersController.updateUser(req, res);
 });
 
 router.delete('/:id', (req, res) => {
